@@ -115,7 +115,7 @@ nav{
     background-color: rgb(109,67, 0);
 }
 
-@media (max-width:600px) {
+@media (max-width:884px) {
     body{
         overflow-y: visible;
     }
@@ -218,4 +218,14 @@ nav{
     padding: 5px;
     border-radius: 5px;
     margin-top: 5px;
+}
+
+p{
+    color: #fff;
+    font-size: small;
+    text-transform: none;
+    letter-spacing: normal;
+}
+p strong{
+    color: orange;
 }
