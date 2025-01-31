@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Wilson Fernando Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="shortcut icon" href="images/W.png" type="image/x-icon">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+                <span>WILSON FERNANDO</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="#">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="#">Sobre mim</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="Projectos.html">Projectos</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><a href="Habilidades.html">Habilidades</a></div>
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="contactos.html">Contactos</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="#">Home</a>
+                <a href="#">Sobre mim</a>
+                <a href="Habilidades.html">Habilidades</a>
+                <a href="Projectos.html">Projectos</a>
+                <a href="contactos.html">Contactos</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+        <section>
+            <div class="main-container">
+                <div class="image" data-aos="zoom-in-right" data-aos-duration="2500">
+                    <div class="image-radius">
+                        <img src="images/image.jpg" style="border-radius: 80px; width: 70%; margin-left: 100px;" alt="">
+                    </div>
+                </div>
+                <div class="content">
+                    <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">Apresentando<br><span> WILSON FERNANDO</span></h1>
+                    <div class="typewriter" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">Sou <span></span></div>
+                    <p data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1000">Sou estudante de Engenharia Informática, com 23 anos, apaixonado por
+                        tecnologia e sempre em busca de aprendizado contínuo. Possuo uma base
+                        sólida em matemática e informática, incluindo proficiência no Microsoft Office.
+                        Além disso, minha experiência prática em corte de cabelo e culinária demonstra
+                        atenção aos detalhes e habilidades organizacionais. Embora ainda não tenha
+                        experiência formal na área, sou altamente motivado, dedicado e pronto para
+                        aplicar meu conhecimento em projetos desafiadores, contribuindo para o
+                        crescimento da empresa em um ambiente colaborativo.
+                        </p>
+                    <div class="social-links" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1200">
+                        <a href="https://github.com/Willppo" ><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/wilson-fernando-662937226/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <div class="btn" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="1300">
+                        <a href="doc/Curriculo Vitae Wilson Fernando.pdf" download="meu_arquivo.pdf">
+                        <button>BAIXAR CV</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+<!--Projects section-->
+        
+            
+        
+
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init({offset:0});
+        </script>
+        <script>
+            function hamburg(){
+                const navbar = document.querySelector(".dropdown")
+                navbar.style.transform = "translateY(0px)"
+            }
+            function cancel(){
+                const navbar = document.querySelector(".dropdown")
+                navbar.style.transform = "translateY(-500px)"
+            }
+        </script>
+</body>
+</html>

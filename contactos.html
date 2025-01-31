@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    />
+    <title>TALK TO ME</title>
+    <link rel="stylesheet" href="css/contactos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="shortcut icon" href="images/W.png" type="image/x-icon">
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+          <span>WILSON FERNANDO</span>
+        </div>
+        <div class="links">
+          <div
+            class="link"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="100"
+          >
+            <a href="index.html">Home</a>
+          </div>
+          <div
+            class="link"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
+            <a href="index.html">Sobre mim</a>
+          </div>
+          <div
+            class="link"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="400"
+          >
+            <a href="Projectos.html">Projectos</a>
+          </div>
+          <div
+            class="link"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="500"
+          >
+            <a href="Habilidades.html">Habilidades</a>
+          </div>
+          <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+            <a href="#">Contactos</a>
+          </div>
+        </div>
+        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+      </div>
+      <div class="dropdown">
+        <div class="links">
+          <a href="index.html">Home</a>
+          <a href="index.html">Sobre mim</a>
+          <a href="Habilidades.html">Habilidades</a>
+          <a href="Projectos.html">Projectos</a>
+          <a href="#">Contactos</a>
+          <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+        </div>
+      </div>
+    </nav>
+    <section>
+        <div class="content" style="margin-top: 50px;">
+            <div class="content">
+                <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800"><br><span>QUER UM PROJECTO?</span></h1>
+                <div class="typewriter" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900"> <span></span></div>
+                <p>
+                    Se você precisa de um site profissional, <br> um design personalizado ou apenas quer trocar uma ideia, estou à disposição. <br> Entre em contato pelo formulário abaixo ou através do meu linkedin. <br> Responderei o mais rápido possível! Caso queira algo mais específico, me avise que ajusto! 
+                </p>
+            </div>
+        </div>
+      <!-- From Uiverse.io by gharsh11032000 -->
+      <div class="container-section" style="margin-top: 30px;">
+        <div class="form-container">
+          <form class="form">
+            <div class="form-group">
+                <label for="">
+                    Name
+                </label>
+                <input type="text" class="name">
+                <label for="">Email</label>
+                <input type="text" class="email">
+                <label for="">Country</label>
+                <input type="text" class="country">
+                <label for="">Message</label>
+                <textarea class="message"></textarea>
+            </div>
+            <button class="form-submit-btn" type="submit" onclick="sendwhatsapp();">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!--Projects section-->
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ offset: 0 });
+    </script>
+    <script>
+      function hamburg() {
+        const navbar = document.querySelector(".dropdown");
+        navbar.style.transform = "translateY(0px)";
+      }
+      function cancel() {
+        const navbar = document.querySelector(".dropdown");
+        navbar.style.transform = "translateY(-500px)";
+      }
+      function sendwhatsapp(){
+        var phoneNumber = "+244949836052";
+        
+        var name = document.querySelector('.name').value;
+        var email = document.querySelector('.email').value;
+        var country = document.querySelector('.country').value;
+        var message = document.querySelector('.message').value;
+
+        var url = "https://wa.me/" + phoneNumber + "?text=" + "Nome: " + name + "%0a"
+        + "Email: " + email + "%0a"
+        + "Pais: " + country + "%0a"
+        + "Mensagem: " + message + "%0a%0a";
+
+        window.open(url, '_blank').focus();
+    }
+    </script>
+  </body>
+</html>

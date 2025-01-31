@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projectos - Wilson Fernando</title>
+    <link rel="stylesheet" href="css/projectos.css">
+    <link rel="shortcut icon" href="images/W.png" type="image/x-icon">
+    <script src="js/projecto.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+                <span>WILSON FERNANDO</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="index.html">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="index.html">Sobre mim</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="#">Projectos</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><a href="Habilidades.html">Habilidades</a></div>
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="contactos.html">Contactos</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="">Home</a>
+                <a href="">Sobre mim</a>
+                <a href="">Habilidades</a>
+                <a href="">Projectos</a>
+                <a href="">Contactos</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="video-container">
+            <div class="video">
+                <video src="videos/Card Wilson.mp4" muted></video>
+                <p class="video-caption">Descrição do projeto: Cartão Wilson</p>
+            </div>
+            <div class="video">
+                <video src="videos/CSMJ.mp4" muted></video>
+            </div>
+            <div class="video">
+                <video src="videos/Formulario.mp4" muted></video>
+            </div>
+            <div class="video">
+                <video src="videos/hotel.mp4" muted></video>
+            </div>
+            <div class="video">
+                <video src="videos/jogo da nzila x.mp4" muted></video>
+            </div>
+            <div class="video">
+                <video src="videos/Lista de tarefas.mp4" muted></video>
+            </div>
+            <div class="video">
+                <video src="videos/portfolio Nzila x.mp4" muted></video>
+            </div>
+            <div class="video">
+                <video src="videos/projecto figma.mp4" muted></video>
+            </div>
+            <div class="video">
+                <video src="videos/ver o tempo.mp4" muted></video>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init({offset:0});
+        </script>
+        <script>
+            function hamburg(){
+                const navbar = document.querySelector(".dropdown")
+                navbar.style.transform = "translateY(0px)"
+            }
+            function cancel(){
+                const navbar = document.querySelector(".dropdown")
+                navbar.style.transform = "translateY(-500px)"
+            }
+        </script>
+</body>
+</html>

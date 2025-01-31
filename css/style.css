@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    overflow-x: hidden;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(to right, rgb(0, 0, 0), rgb(2, 2, 2));
+}
+nav{
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+}
+.nav-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    color: black;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.logo span{
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px rgb(175, 175, 175);
+}
+.hamburg, .cancel{
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    display: none;
+}
+.nav-container .links {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+.nav-container .links a{
+    position: relative;
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 500;
+    transform: 0.3s linear;
+}
+.nav-container .links a::before{
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    transition: 0.2s linear;
+}
+.nav-container .links a:hover::before{
+    width: 100%;
+}
+.nav-container .contact-btn{
+    background-color: transparent;
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: 2px solid rgb(255, 255, 255);
+    transition: 0.2s linear;
+}
+.nav-container .contact-btn a{
+    color: rgb(255, 255, 255);
+    transition: 0.3s linear;
+}
+.nav-container .contact-btn:hover, .nav-container .contact-btn:hover a{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+.nav-container .links a:hover{
+    color: rgb(255, 255, 255);
+}
+.dropdown{
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    transform: translateY(-500px);
+    width: 100%;
+    height: auto;
+    backdrop-filter: brightness(40%) blur(3px);
+    box-shadow: 0 0 20px black;
+    transition: 0.2s linear;
+}
+.dropdown .links a{
+    color: white;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    padding: 15px 0;
+    align-items: center;
+    transition: 0.2s linear;
+}
+.dropdown .links a:hover{
+    background-color: rgb(109,67, 0);
+}
+section{
+    width: 100%;
+    height: 90vh;
+}
+.main-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.main-container .image{
+    z-index: -1;
+    width: 50%;
+}
+.main-container .image img{
+    width: 100%;
+}
+.main-container .content{
+    color: rgb(255, 255, 255);
+    width: 40%;
+    min-height: 100px;
+}
+.content h1{
+    font-size: clamp(1rem, 2rem + 5vw, 3rem);
+}
+.content h1 span{
+    color: rgb(255, 210, 7);
+    text-shadow: 0 0 10px rgb(255, 162, 12);
+}
+.content .typewriter{
+    font-weight: 600;
+    font-size: clamp(1rem, 1rem + 5vw, 2rem);
+}
+.content .typewriter span{
+    color: rgb(255, 210, 7);
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px rgb(255, 162, 12);
+    position: relative;
+    transition: 0.3s linear;
+}
+.typewriter span::before{
+    content: "Desenvolvedor";
+    animation: words 15s infinite;
+}
+.typewriter span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    animation:  cursor 0.6s linear infinite;
+}
+@keyframes cursor {
+    to{
+        border-left: 3px solid #ffae00;
+    }
+}
+@keyframes words {
+    0%, 33%{
+        content: "Front-End";
+    }
+    34%, 66%{
+        content: "Web Designer";
+    }
+}
+.content p{
+    font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);
+    margin: 10px 0;
+}
+.social-links i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color:transparent;
+    border: 0.2rem solid rgb(255, 255, 255);
+    border-radius: 50%;
+    color:rgb(255, 255, 255);
+    margin: 5px 10px;
+    font-size: 1.5rem;
+    transition: 0.2s linear;
+}
+.social-links i:hover{
+    scale: 1.3;
+    color: rgb(255, 255, 255);
+    background-color: rgb(109,67, 0);
+    filter: drop-shadow(0 0 10px rgb(255, 157, 0));
+}
+.content button{
+    width: 40%;
+    height: 6vh;
+    margin-top: 30px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: none;
+    outline: none;
+    font-size: 100%;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: 0.2s linear;
+}
+.content button:hover{
+ scale: 1.1;
+ color: rgb(255, 255, 255);
+ border: 2px solid rgb(255, 255, 255);
+ background-color: transparent;
+ font-weight: 700;
+ box-shadow: 0 0 40px rgb(255, 240, 103);
+}
+@media (max-width:884px) {
+    body{
+        overflow-y: visible;
+    }
+    nav .logo{
+        position: absolute;
+        top: 16px;
+        left: 15px;
+        font-size: 1.5rem;
+    }
+    .main-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-container .links{
+        display: none;
+    }
+    .hamburg,.cancel{
+        display: block;
+    }
+    .main-container .content{
+        width: 80%;
+    }
+    .social-links i{
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+    .cancel{
+        color: white;
+    }
+    .main-container .image{
+        width: 80%;
+        margin-bottom: 0px;
+    }
+}
+
+/*HABILIDADES.html*/
+.skill-heading1{
+    text-align: center;
+}
+
+.skill{
+    list-style: none;
+    width: 500px;
+    margin: 60px auto;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 14px 28px rgba(255, 255, 255, 0.25), 0 10px 10px rgba(255, 255, 255, 0.22);
+}
+.skill li{
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.bar{
+    background-color: #353b48;
+    display: block;
+    height: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(255, 255, 255, 0.12), 0 1px 2px rgba(255, 255, 255, 0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.bar:hover{
+    box-shadow: 0 14px 28px rgba(255, 255, 255, 0.25), 0 10px 10px rgba(255, 255, 255, 0.22);
+}
+.bar span{
+    height: 20px;
+    float: left;
+    background: linear-gradient(135deg, rgba(236, 0, 140, 1)0%, rgba(252,103,103,1)100%);
+}
+
+/*HARD SKILLS*/
+.html{
+    width: 90%;
+    animation: html 3s;
+}
+.css{
+    width: 70%;
+    animation: css 3s;
+}
+.js{
+    width: 45%;
+    animation: js 3s;
+}
+.boots{
+    width: 65%;
+    animation: boots 3s;
+}
+.excel{
+    width: 70%;
+    animation: excel 3s;
+}
+.word{
+    width: 100%;
+    animation: word 3s;
+}
+.power{
+    width: 70%;
+    animation: power 3s;
+}
+
+@keyframes html {
+    0%{
+        width: 0%;
+    }100%{
+        width: 90%;
+    }
+}
+@keyframes css {
+    0%{
+        width: 0%;
+    }100%{
+        width: 70%;
+    }
+}
+@keyframes js {
+    0%{
+        width: 0%;
+    }100%{
+        width: 45%;
+    }
+}
+@keyframes boots {
+    0%{
+        width: 0%;
+    }100%{
+        width: 50%;
+    }
+}
+@keyframes excel {
+    0%{
+        width: 0%;
+    }100%{
+        width: 70%;
+    }
+}
+@keyframes word {
+    0%{
+        width: 0%;
+    }100%{
+        width: 100%;
+    }
+}
+@keyframes power {
+    0%{
+        width: 0%;
+    }100%{
+        width: 70%;
+    }
+}
+/*SOFT SKILLS*/
+.INIAPR{
+    width: 80%;
+    animation: INIAPR 3s;
+}
+.AD{
+    width: 80%;
+    animation: AD 3s;
+}
+.FD{
+    width: 100%;
+    animation: FD 3s;
+}
+.CT{
+    width: 75%;
+    animation: CT 3s;
+}
+.OM{
+    width: 100%;
+    animation: OM 3s;
+}
+.PR{
+    width: 100%;
+    animation: PR 3s;
+}
+.PED{
+    width: 70%;
+    animation: PED 3s;
+}
+
+@keyframes INIAPR {
+    0%{
+        width: 0%;
+    }100%{
+        width: 80%;
+    }
+}
+@keyframes AD {
+    0%{
+        width: 0%;
+    }100%{
+        width: 80%;
+    }
+}
+@keyframes FD {
+    0%{
+        width: 0%;
+    }100%{
+        width: 100%;
+    }
+}
+@keyframes CT {
+    0%{
+        width: 0%;
+    }100%{
+        width: 100%;
+    }
+}
+@keyframes OM {
+    0%{
+        width: 0%;
+    }100%{
+        width: 70%;
+    }
+}
+@keyframes PR {
+    0%{
+        width: 0%;
+    }100%{
+        width: 100%;
+    }
+}
+@keyframes PED {
+    0%{
+        width: 0%;
+    }100%{
+        width: 70%;
+    }
+}
+
+.container-side{
+    display: flex;
+}
